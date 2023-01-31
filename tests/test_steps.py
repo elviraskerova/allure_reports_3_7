@@ -39,13 +39,13 @@ def open_main_page():
 @allure.step('Ищем репозиторий {repo}')
 def search_for_repository(repo):
     s('.header-search-input').click()
-    s('.header-search-input').send_keys('repo')
+    s('.header-search-input').send_keys(repo)
     s('.header-search-input').submit()
 
 
 @allure.step('Переходим по ссылке репозитория {repo}')
 def go_to_repository(repo):
-    s(by.link_text('repo')).click()
+    s(by.link_text(repo)).click()
 
 
 @allure.step('Открываем таб Issues')
